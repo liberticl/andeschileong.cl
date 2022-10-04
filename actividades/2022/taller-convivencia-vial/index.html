@@ -84,8 +84,248 @@
     <div class="panel">
       <div class="panel-body">
         <div class="blogpost">
-          <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+          <p><style>
+    .row>.column {
+        padding: 0 8px;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+     
+    .column {
+        float: center;
+        width: max(25%,calc(100%/6));
+        margin: 1% auto;
+    }
+
+     
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.800);
+    }
+
+     
+    .modal-content {
+        position: relative;
+        background-color: #fefefe00;
+        margin: auto;
+        width: 100%;
+        max-width: 700px;
+    }
+
+     
+    .close {
+        color: white;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #999;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+     
+    .mySlides {
+        display: none;
+    }
+
+    .cursor {
+        cursor: pointer;
+    }
+     
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.3s;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+     
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+     
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+     
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+     
+    .caption-container {
+        text-align: center;
+        background-color: black;
+        padding: 2px 16px;
+        color: white;
+    }
+
+    .demo {
+        opacity: 0.6;
+    }
+
+    .active,
+    .demo:hover {
+        opacity: 1;
+    }
+
+    img.hover-shadow {
+        transition: 0.3s;
+        border-radius: 1rem;
+    }
+
+    .hover-shadow:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+</style>
+
+<section>
+<div class="row">
+    <div class="column">
+            <img src="/img/actividades/2022/taller-vial/310076445_641994297542189_2123514744902921348_n.jpg" width="95%" onclick="openModal();currentSlide( 0 )" class="hover-shadow cursor">
+        </div>
+    <div class="column">
+            <img src="/img/actividades/2022/taller-vial/GOPR3232.JPG" width="95%" onclick="openModal();currentSlide( 1 )" class="hover-shadow cursor">
+        </div>
+    <div class="column">
+            <img src="/img/actividades/2022/taller-vial/GOPR3233.JPG" width="95%" onclick="openModal();currentSlide( 2 )" class="hover-shadow cursor">
+        </div>
+    <div class="column">
+            <img src="/img/actividades/2022/taller-vial/GOPR3235.JPG" width="95%" onclick="openModal();currentSlide( 3 )" class="hover-shadow cursor">
+        </div>
+    <div class="column">
+            <img src="/img/actividades/2022/taller-vial/GOPR3237.JPG" width="95%" onclick="openModal();currentSlide( 4 )" class="hover-shadow cursor">
+        </div>
+    <div class="column">
+            <img src="/img/actividades/2022/taller-vial/GOPR3240.JPG" width="95%" onclick="openModal();currentSlide( 5 )" class="hover-shadow cursor">
+        </div>
+    
+</div>
+
+<div id="myModal" class="modal" onkeydown="test()">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+        <div class="mySlides">
+                <img src="/img/actividades/2022/taller-vial/310076445_641994297542189_2123514744902921348_n.jpg" style="width:100%; border-radius: 1.5rem;">
+            </div>
+        <div class="mySlides">
+                <img src="/img/actividades/2022/taller-vial/GOPR3232.JPG" style="width:100%; border-radius: 1.5rem;">
+            </div>
+        <div class="mySlides">
+                <img src="/img/actividades/2022/taller-vial/GOPR3233.JPG" style="width:100%; border-radius: 1.5rem;">
+            </div>
+        <div class="mySlides">
+                <img src="/img/actividades/2022/taller-vial/GOPR3235.JPG" style="width:100%; border-radius: 1.5rem;">
+            </div>
+        <div class="mySlides">
+                <img src="/img/actividades/2022/taller-vial/GOPR3237.JPG" style="width:100%; border-radius: 1.5rem;">
+            </div>
+        <div class="mySlides">
+                <img src="/img/actividades/2022/taller-vial/GOPR3240.JPG" style="width:100%; border-radius: 1.5rem;">
+            </div>
+        
+
+        
+        <a class="prev" onclick=plusSlides(-1)>&#10094;</a>
+        <a class="next" onclick=plusSlides(1)>&#10095;</a>
+    </div>
+</div>
+</section>
+
+<script>
+    
+    function openModal() {
+        document.getElementById("myModal").style.display = "block";
+    }
+
+    
+    var span = document.getElementsByClassName("close")[0]
+    var modal = document.getElementById("myModal")
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function() {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    var next = document.getElementsByClassName("next")
+    var prev = document.getElementsByClassName("prev")
+
+
+    
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+</script>
+<!-- raw HTML omitted --></p>
 <p><em>El equipo de <a href="/"><strong>Andes Chile ONG</strong></a> ha unido energías con el <a href="https://www.instagram.com/mfc_valpo/"><strong>Movimiento Furiosos Ciclistas Porteños</strong></a> y <a href="https://www.decathlon.cl/"><strong>Decathlon</strong></a> Viña del Mar para realizar talleres en torno a la Semana de la Movilidad Sostenible, de donde surge la convocatoria a este taller abierto de Convivencia Vial</em></p>
 <p>La jungla de cemento es un caos a la hora de transitar por la calle y es por eso que se invita a la comunidad de ciclos al taller taller impartido por <em>Francisco Vergara</em>, director de nuestro equipo con 5 años de experiencia en el activismo sobre la movilidad urbana.</p>
 <p>El taller revisará los siguientes temas:</p>
@@ -117,6 +357,19 @@
                   <div class="col-8">
                     <h6 style="text-align: left">
                       <b><a href="/actividades/2018/60_mata/">Campaña #60Mata</a></b>
+                    </h6>
+                  </div>
+                </div>
+              
+                <div class="row" style="margin-top: 7px;">
+                  <div class="col-4">
+                    <h6 style="text-align: right">
+                      30/09/2022
+                    </h6>
+                  </div>
+                  <div class="col-8">
+                    <h6 style="text-align: left">
+                      <b><a href="/noticias/2022/dia-nacional-sin-autos/">Comunicado de Prensa</a></b>
                     </h6>
                   </div>
                 </div>
@@ -169,19 +422,6 @@
                   <div class="col-8">
                     <h6 style="text-align: left">
                       <b><a href="/actividades/2020/expo_cicloturismo/">Expo Cicloturismo 2020</a></b>
-                    </h6>
-                  </div>
-                </div>
-              
-                <div class="row" style="margin-top: 7px;">
-                  <div class="col-4">
-                    <h6 style="text-align: right">
-                      27/09/2019
-                    </h6>
-                  </div>
-                  <div class="col-8">
-                    <h6 style="text-align: left">
-                      <b><a href="/actividades/2019/dia_nacional_sin_autos_2019/">Día Nacional Sin Auto 2019</a></b>
                     </h6>
                   </div>
                 </div>

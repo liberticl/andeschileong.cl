@@ -106,13 +106,233 @@
 </p>
 <hr>
 </p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<p><style>
+    .row>.column {
+        padding: 0 8px;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+     
+    .column {
+        float: center;
+        width: max(25%,calc(100%/2));
+        margin: 1% auto;
+    }
+
+     
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.800);
+    }
+
+     
+    .modal-content {
+        position: relative;
+        background-color: #fefefe00;
+        margin: auto;
+        width: 100%;
+        max-width: 700px;
+    }
+
+     
+    .close {
+        color: white;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #999;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+     
+    .mySlides {
+        display: none;
+    }
+
+    .cursor {
+        cursor: pointer;
+    }
+     
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.3s;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+     
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+     
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+     
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+     
+    .caption-container {
+        text-align: center;
+        background-color: black;
+        padding: 2px 16px;
+        color: white;
+    }
+
+    .demo {
+        opacity: 0.6;
+    }
+
+    .active,
+    .demo:hover {
+        opacity: 1;
+    }
+
+    img.hover-shadow {
+        transition: 0.3s;
+        border-radius: 1rem;
+    }
+
+    .hover-shadow:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+</style>
+
+<section>
+<div class="row">
+    <div class="column">
+            <img src="/img/actividades/2022/dnsa/imgs/relloj2.jpeg" width="95%" onclick="openModal();currentSlide( 0 )" class="hover-shadow cursor">
+        </div>
+    <div class="column">
+            <img src="/img/actividades/2022/dnsa/imgs/reloj1.jpeg" width="95%" onclick="openModal();currentSlide( 1 )" class="hover-shadow cursor">
+        </div>
+    
+</div>
+
+<div id="myModal" class="modal" onkeydown="test()">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+        <div class="mySlides">
+                <img src="/img/actividades/2022/dnsa/imgs/relloj2.jpeg" style="width:100%; border-radius: 1.5rem;">
+            </div>
+        <div class="mySlides">
+                <img src="/img/actividades/2022/dnsa/imgs/reloj1.jpeg" style="width:100%; border-radius: 1.5rem;">
+            </div>
+        
+
+        
+        <a class="prev" onclick=plusSlides(-1)>&#10094;</a>
+        <a class="next" onclick=plusSlides(1)>&#10095;</a>
+    </div>
+</div>
+</section>
+
+<script>
+    
+    function openModal() {
+        document.getElementById("myModal").style.display = "block";
+    }
+
+    
+    var span = document.getElementsByClassName("close")[0]
+    var modal = document.getElementById("myModal")
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function() {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    var next = document.getElementsByClassName("next")
+    var prev = document.getElementsByClassName("prev")
+
+
+    
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+</script>
+<!-- raw HTML omitted --></p>
 <p>Este año se ha intentado hacer distintas actividades dentro del contexto que se celebra, sin embargo, la autoridad regional ha preferido dar mayor importancia a la prevalencia del vehículo motorizado particular por sobre los distintos medios de transporte que se utilizan en el Gran Valparaíso. Más información sobre esto se puede encontrar <a href="/noticias/2022/solicitud-borde-costero-dnsa"><strong>aquí</strong></a>.</p>
 <p><em>Vivimos en una de las regiones con menor voluntad política sobre la forma en que nos movemos y vivimos nuestras ciudades. El transporte público y la infraestructura para medios no motorizados llevan años de retraso y aún así nadie responde.</em></p>
 <p><em>¡Ahora nos cansamos y aprovechamos la celebración mundial y nacional de caracter medioambiental para hacer un llamado de atención!</em></p>
-<p><em>¡No queremos que nos sigan matando ni que hagan oídos sordos a nuestras peticiones. Solo queremos un mejor vivir para las personas!</em></p>
-<p><a href="https://www.instagram.com/p/Ci-17OmP-zm/"><img src="/img/actividades/2022/dnsa-2022.jpg" alt="DNSA2022"></a></p>
+<p><em>¡No queremos que nos sigan matando ni que hagan oídos sordos a nuestras peticiones. Sólo queremos un mejor vivir para las personas!</em></p>
+<hr>
+<h4 id="actualización-octubre-2022">Actualización Octubre 2022</h4>
+<p>El día viernes 30 de septiembre se realizó un Punto de Prensa donde la única autoridad que asistió es la Concejala de Valparaíso Camila Nieto. Puedes revisar el material de prensa a continuación:</p>
+<iframe src='https://drive.google.com/file/d/17fZdQlngk_1essGieqh_uXAd7gGNzmH9/preview'  style="overflow:hidden;height:480px;width:100%"  style="text-align: center;" allow="autoplay" allowfullscreen="allowfullscreen"></iframe>
+<!-- raw HTML omitted -->
 
           <br>
           <br>
@@ -143,6 +363,19 @@
                   <div class="col-8">
                     <h6 style="text-align: left">
                       <b><a href="/actividades/2017/dia_mundial_sin_auto_2017/">Día Mundial Sin Auto 2017</a></b>
+                    </h6>
+                  </div>
+                </div>
+              
+                <div class="row" style="margin-top: 7px;">
+                  <div class="col-4">
+                    <h6 style="text-align: right">
+                      30/09/2022
+                    </h6>
+                  </div>
+                  <div class="col-8">
+                    <h6 style="text-align: left">
+                      <b><a href="/noticias/2022/dia-nacional-sin-autos/">Comunicado de Prensa</a></b>
                     </h6>
                   </div>
                 </div>
@@ -182,19 +415,6 @@
                   <div class="col-8">
                     <h6 style="text-align: left">
                       <b><a href="/actividades/2022/cicletada_patrimonial_2022/">Cicletada Patrimonial: Historias de Transporte</a></b>
-                    </h6>
-                  </div>
-                </div>
-              
-                <div class="row" style="margin-top: 7px;">
-                  <div class="col-4">
-                    <h6 style="text-align: right">
-                      31/10/2021
-                    </h6>
-                  </div>
-                  <div class="col-8">
-                    <h6 style="text-align: left">
-                      <b><a href="/actividades/2021/cicletada_halloween_2021/">Cicletada de Halloween 2021</a></b>
                     </h6>
                   </div>
                 </div>
