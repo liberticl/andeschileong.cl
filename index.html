@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html lang="es-CL">
-  <head>
+
+<head>
 	<meta name="generator" content="Hugo 0.114.1">
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQG5PZVGT6"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LQG5PZVGT6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-LQG5PZVGT6');
+  </script>
 
-      gtag('config', 'G-LQG5PZVGT6');
-    </script>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Andes Chile ONG">
-    <link rel="shortcut icon" type="image/x-icon" href="https://andeschileong.cl/img/favicon.ico">
-    <title>Andes Chile ONG</title>
-    <meta name="description" content="Movilidad Urbana">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    
-    <link rel="preload stylesheet" href="/css/main.min.css" as="style">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old">
-    
-      <link rel="stylesheet" href="https://andeschileong.cl//css/component.css">
-    
-    <!--[if lt IE 9]>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Andes Chile ONG">
+  <link rel="shortcut icon" type="image/x-icon" href="https://andeschileong.cl/img/favicon.ico">
+  <title>Andes Chile ONG</title>
+  <meta name="description"
+    content="Movilidad Urbana">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  
+  <link rel="preload stylesheet" href="/css/main.min.css" as="style">
+  <link rel="stylesheet" type="text/css"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old">
+  
+  <link rel="stylesheet" href="https://andeschileong.cl//css/component.css">
+  
+  <!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
-  </head>
-  <body>
-    <div id="content">
-  <div class="container mb-3">
+
+</head>
+
+<body>
+  <div id="content">
+<div class="container mb-3">
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="https://andeschileong.cl/">
@@ -80,14 +86,106 @@
 </nav>
 
 
-  <section id="about">
-    <div class="container">
-      <div class="avatar mb-5">
-        <img src="img/logo_andes.png" alt="Responsive image" width="40%">
-      </div>
-      <p>Organización sin fines de lucro orientada a difundir y crear conciencia respecto del uso de ciclos. Promovemos el uso responsable de la vía pública, creando conciencia a través de diferentes actividades como charlas de educación vial, cicletadas temáticas, estudios y conversación con las autoridades para lograr ciudades amigables.</p>
+<section id="about">
+  <div class="container">
+    <div class="avatar mb-5">
+      <img src="img/logo_andes.png" alt="Responsive image" width="40%">
+    </div>
+    <style>
+    .form-container {
+      max-width: 100%;
+      overflow: hidden;
+      position: relative;
+      padding-bottom: 100%;
+      height: 0;
+    }
+  
+    .form-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
 
-      <div class="social">
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 850px;
+    position: relative;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>
+
+    <a href="/estudios/2023/encuesta-nacional-uso-bicicleta/" class="button btn">ENCUESTA NACIONAL SOBRE EL USO DE LA BICICLETA 2023</a>
+    <button id="openModal" style="display:none"><b></b></button>
+    
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="form-container">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSekAFMeeEgyyBxy-kvQoGzH9rMN38_bRr0SNEC7kxGGJ8zajA/viewform?embedded=true" width="800" height="650" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    var modal = document.getElementById('modal');
+    var btnOpenModal = document.getElementById('openModal');
+    var btnCloseModal = document.getElementsByClassName('close')[0];
+    
+    btnOpenModal.onclick = function() {
+      modal.style.display = 'block';
+    };
+    
+    btnCloseModal.onclick = function() {
+      modal.style.display = 'none';
+    };
+    
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    };
+
+    window.onload = function() {
+        modal.style.display = 'block';
+      };
+    
+    </script>
+    <br><br>
+    <p>Organización sin fines de lucro orientada a difundir y crear conciencia respecto del uso de ciclos. Promovemos el uso responsable de la vía pública, creando conciencia a través de diferentes actividades como charlas de educación vial, cicletadas temáticas, estudios y conversación con las autoridades para lograr ciudades amigables.</p>
+
+    <div class="social">
   <ul class="social-links">
     
       <li><a href="mailto:equipo@andeschileong.cl"><i class="fa fa-envelope"></i></a></li>
@@ -111,18 +209,18 @@
   </ul>
 </div>
 
-    </div>
-  </section>
+  </div>
+</section>
 
-    </div>
-    <script>
-      $(function() {
-          Grid.init();
-      });
-  </script>    
+  </div>
+  <script>
+    (function () {
+      Grid.init();
+    });
+  </script>
 
-    
-    <footer class="footer">
+  
+  <footer class="footer">
   <div class="container">
     <div class="text-muted">Creado con cariño por nosotros ♥.</div>
     <div class="text-muted"> Nos basamos en <a href="http://www.github.com/nurlansu/hugo-sustain/">Hugo Sustain</a></div>
@@ -133,8 +231,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script><script src="https://andeschileong.cl//js/grid.js"></script>
 
 }
-    
-  </body>
+
+</body>
 
 
 </html>
