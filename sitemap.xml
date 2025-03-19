@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://andeschileong.cl/</loc>
+    <lastmod>2025-04-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://andeschileong.cl/tags/cicloturismo/</loc>
     <lastmod>2025-02-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://andeschileong.cl/actividades/2025/desafio-araucania-profunda/</loc>
-    <lastmod>2025-02-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://andeschileong.cl/</loc>
     <lastmod>2025-02-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://andeschileong.cl/tags/</loc>
@@ -83,10 +83,10 @@
     <loc>https://andeschileong.cl/actividades/2024/dia-mundial-de-la-bicicleta/</loc>
     <lastmod>2024-06-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://andeschileong.cl/tags/valpara%C3%ADso-cicloamigable/</loc>
+    <loc>https://andeschileong.cl/actividades/2024/valparaiso-cicloamigable-1/</loc>
     <lastmod>2024-05-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://andeschileong.cl/actividades/2024/valparaiso-cicloamigable-1/</loc>
+    <loc>https://andeschileong.cl/tags/valpara%C3%ADso-cicloamigable/</loc>
     <lastmod>2024-05-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://andeschileong.cl/actividades/2024/cafe-con-transporte/</loc>
@@ -125,10 +125,10 @@
     <loc>https://andeschileong.cl/categories/</loc>
     <lastmod>2023-09-05T18:00:00-04:00</lastmod>
   </url><url>
-    <loc>https://andeschileong.cl/tags/cicletada/</loc>
+    <loc>https://andeschileong.cl/categories/cicletada/</loc>
     <lastmod>2023-09-05T18:00:00-04:00</lastmod>
   </url><url>
-    <loc>https://andeschileong.cl/categories/cicletada/</loc>
+    <loc>https://andeschileong.cl/tags/cicletada/</loc>
     <lastmod>2023-09-05T18:00:00-04:00</lastmod>
   </url><url>
     <loc>https://andeschileong.cl/cicletada/</loc>
@@ -302,19 +302,19 @@
     <loc>https://andeschileong.cl/registro/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url><url>
-    <loc>https://andeschileong.cl/tags/actividades/</loc>
+    <loc>https://andeschileong.cl/actividades/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url><url>
     <loc>https://andeschileong.cl/categories/actividades/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url><url>
-    <loc>https://andeschileong.cl/actividades/</loc>
-    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
-  </url><url>
-    <loc>https://andeschileong.cl/tags/registro/</loc>
+    <loc>https://andeschileong.cl/tags/actividades/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url><url>
     <loc>https://andeschileong.cl/categories/registro/</loc>
+    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+  </url><url>
+    <loc>https://andeschileong.cl/tags/registro/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url>
 </urlset>
