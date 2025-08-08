@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>FMB on Andes Chile ONG</title>
-    <link>http://localhost:1313/tags/fmb/</link>
+    <link>https://andeschileong.cl/tags/fmb/</link>
     <description>Recent content in FMB on Andes Chile ONG</description>
     <generator>Hugo</generator>
     <language>es-CL</language>
     <lastBuildDate>Wed, 04 Sep 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/fmb/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://andeschileong.cl/tags/fmb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Foro Mundial de la Bicicleta 13</title>
-      <link>http://localhost:1313/actividades/2024/fmb13/</link>
+      <link>https://andeschileong.cl/actividades/2024/fmb13/</link>
       <pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/actividades/2024/fmb13/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/actividades/2024/fmb13_long.jpeg&#34; alt=&#34;FMB13&#34;&gt;&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;p style=&#34;font-size:15px; margin-bottom:0rem; line-height:22px&#34;&gt; &#xA;    &#xA;        &#xA;            El Foro Mundial de la Bicicleta (FMB) es un foro de ciclo-activismo, en donde se discuten problemáticas en relación con la movilidad en bicicleta y al planeamiento de ciudades para las personas. Se realiza desde el 2011 una vez al año en distintas ciudades del mundo. Surge como respuesta al arrollamiento intencional de un automovilista contra los participantes de una Masa Crítica (cicletada) de Porto Alegre que ocurrió el 25 de febrero de 2011. Lo ocurrido fue registrado en vídeo generando manifestaciones de solidaridad en diversas ciudades del mundo y fomentando la discusión sobre la violencia en el tránsito. La primera edición del FMB tuvo lugar exactamente en el primer aniversario del atentado en la ciudad brasilera de Porto Alegre.&#xA;        &#xA;    &#xA;&lt;/p&gt;</description>
+      <guid>https://andeschileong.cl/actividades/2024/fmb13/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://andeschileong.cl/img/actividades/2024/fmb13_long.jpeg&#34; alt=&#34;FMB13&#34;&gt;&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;p style=&#34;font-size:15px; margin-bottom:0rem; line-height:22px&#34;&gt; &#xA;    &#xA;        &#xA;            El Foro Mundial de la Bicicleta (FMB) es un foro de ciclo-activismo, en donde se discuten problemáticas en relación con la movilidad en bicicleta y al planeamiento de ciudades para las personas. Se realiza desde el 2011 una vez al año en distintas ciudades del mundo. Surge como respuesta al arrollamiento intencional de un automovilista contra los participantes de una Masa Crítica (cicletada) de Porto Alegre que ocurrió el 25 de febrero de 2011. Lo ocurrido fue registrado en vídeo generando manifestaciones de solidaridad en diversas ciudades del mundo y fomentando la discusión sobre la violencia en el tránsito. La primera edición del FMB tuvo lugar exactamente en el primer aniversario del atentado en la ciudad brasilera de Porto Alegre.&#xA;        &#xA;    &#xA;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

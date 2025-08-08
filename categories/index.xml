@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Andes Chile ONG</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://andeschileong.cl/categories/</link>
     <description>Recent content in Categories on Andes Chile ONG</description>
     <generator>Hugo</generator>
     <language>es-CL</language>
     <lastBuildDate>Tue, 05 Sep 2023 18:00:00 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://andeschileong.cl/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cicletada</title>
-      <link>http://localhost:1313/categories/cicletada/</link>
+      <link>https://andeschileong.cl/categories/cicletada/</link>
       <pubDate>Tue, 05 Sep 2023 18:00:00 -0400</pubDate>
-      <guid>http://localhost:1313/categories/cicletada/</guid>
+      <guid>https://andeschileong.cl/categories/cicletada/</guid>
       <description></description>
     </item>
     <item>
       <title>Actividades</title>
-      <link>http://localhost:1313/categories/actividades/</link>
+      <link>https://andeschileong.cl/categories/actividades/</link>
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
-      <guid>http://localhost:1313/categories/actividades/</guid>
+      <guid>https://andeschileong.cl/categories/actividades/</guid>
       <description></description>
     </item>
     <item>
       <title>Registro</title>
-      <link>http://localhost:1313/categories/registro/</link>
+      <link>https://andeschileong.cl/categories/registro/</link>
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
-      <guid>http://localhost:1313/categories/registro/</guid>
+      <guid>https://andeschileong.cl/categories/registro/</guid>
       <description></description>
     </item>
   </channel>
