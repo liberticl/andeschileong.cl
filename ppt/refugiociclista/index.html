@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andes Chile ONG</title>
+    <!-- Tailwind CSS CDN for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F9FAFB; /* Very light grey background for freshness */
+            display: flex;
+            flex-direction: column; /* Allow content to stack */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Hide scrollbars */
+            color: #374151; /* Dark grey text */
+        }
+        .slide-container {
+            position: relative;
+            width: 90%; /* Responsive width */
+            max-width: 1100px; /* Increased max width for desktop */
+            height: 75vh; /* Adjusted height for content */
+            background-color: #ffffff;
+            border-radius: 1.5rem; /* More rounded corners */
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Stronger shadow */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 3rem; /* Increased padding */
+            box-sizing: border-box;
+            overflow: hidden; /* Prevent content overflow within the container */
+        }
+        .slide {
+            display: none; /* Hide all slides by default */
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start; /* Align content to the start */
+            text-align: left;
+            opacity: 0;
+            transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out; /* Smoother transitions */
+            transform: translateX(50px); /* Initial offset for animation */
+        }
+        .slide.active {
+            display: flex; /* Show active slide */
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .slide h1 {
+            font-size: 3.5rem; /* Even larger heading */
+            font-weight: 800; /* Bolder */
+            color: #2196F3; /* Vibrant Blue */
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        .slide h2 {
+            font-size: 2.5rem; /* Larger sub-heading */
+            font-weight: 700;
+            color: #FF9800; /* Warm Orange */
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+        .slide h3 {
+            font-size: 2rem; /* Medium heading */
+            font-weight: 600;
+            color: #4CAF50; /* Clean Green */
+            margin-bottom: 1rem;
+        }
+        .slide p, .slide ul, .slide a {
+            font-size: 1.35rem; /* Larger body text */
+            line-height: 1.8; /* Increased line height for readability */
+            color: #374151;
+            margin-bottom: 1rem;
+        }
+        .slide ul {
+            list-style-type: disc;
+            padding-left: 2.5rem; /* More padding for lists */
+        }
+        .slide li {
+            margin-bottom: 0.75rem; /* More space between list items */
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem; /* More space between buttons */
+            margin-top: 2.5rem; /* Margin above buttons */
+        }
+        .nav-button {
+            padding: 1rem 2.5rem; /* Larger buttons */
+            background-image: linear-gradient(to right, #2196F3, #42A5F5); /* Blue gradient */
+            color: white;
+            border: none;
+            border-radius: 1rem; /* More rounded button corners */
+            cursor: pointer;
+            font-size: 1.25rem; /* Larger font */
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .nav-button:hover {
+            background-image: linear-gradient(to right, #1976D2, #2196F3); /* Darker blue on hover */
+            transform: translateY(-3px); /* Lift effect */
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+        }
+        .nav-button:disabled {
+            background-image: none;
+            background-color: #B0BEC5; /* Light grey when disabled */
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Specific styles for the title slide */
+        .slide:first-child {
+            align-items: center;
+            text-align: center;
+        }
+        .slide:first-child h1 {
+            font-size: 4.5rem; /* Even bigger title for the first slide */
+            color: #2196F3;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        .slide:first-child h3 {
+            font-size: 2.5rem;
+            color: #4CAF50;
+        }
+
+        /* Slide number styling */
+        #slide-counter {
+            position: absolute;
+            bottom: 1.5rem; /* Position from bottom */
+            right: 2rem; /* Position from right */
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #6B7280; /* Medium grey for slide number */
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .slide-container {
+                width: 95%;
+                padding: 1.5rem;
+                height: 85vh; /* More height on smaller screens */
+            }
+            .slide h1 {
+                font-size: 2.5rem;
+            }
+            .slide h2 {
+                font-size: 2rem;
+            }
+            .slide h3 {
+                font-size: 1.75rem;
+            }
+            .slide p, .slide ul, .slide a {
+                font-size: 1.1rem;
+            }
+            .nav-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .nav-button {
+                width: 100%;
+                padding: 0.8rem 1.5rem;
+                font-size: 1.1rem;
+            }
+            .slide:first-child h1 {
+                font-size: 3rem;
+            }
+            .slide:first-child h3 {
+                font-size: 2rem;
+            }
+            #slide-counter {
+                font-size: 1rem;
+                bottom: 1rem;
+                right: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Slide 1: Título de la Presentación -->
+        <div class="slide active">
+            <h1>Refugio Ciclista<br>Un proyecto de tecnología con Impacto Social</h1>
+            <h3>Invitación a colaborar para DUOC UC Viña del Mar</h3>
+        </div>
+
+        <!-- Slide 2: Introducción - La Oportunidad -->
+        <div class="slide">
+            <h2>¡Hola!</h2>
+            <ul class="list-disc pl-8 leading-relaxed">
+                <li>Presentamos una emocionante oportunidad para que los estudiantes apliquen sus conocimientos y habilidades.</li>
+                <li>Se trata de la creación de una <span class="font-bold text-blue-600">plataforma digital para el Refugio Ciclista</span>.</li>
+                <li>Este es un desafío real que permitirá el desarrollo de soluciones innovadoras y la adquisición de experiencia práctica invaluable.</li>
+                <li>¡Una contribución directa a una iniciativa con un impacto social significativo!</li>
+            </ul>
+        </div>
+
+        <!-- Slide 3: Contexto - ¿Qué es el Refugio Ciclista? -->
+        <div class="slide">
+            <h2>Contexto: ¿Qué es el Refugio Ciclista?</h2>
+            <ul class="list-disc pl-8 leading-relaxed">
+                <li><span class="font-bold text-orange-600">Evento Anual:</span> Peregrinación a Lo Vásquez (7-8 de diciembre, Ruta 68 Santiago-Valparaíso).</li>
+                <li><span class="font-bold text-orange-600">Participantes:</span> Miles de ciclistas recorren la ruta cerrada.</li>
+                <li><span class="font-bold text-orange-600">Nuestra Iniciativa:</span> "Refugio Ciclista", organizada por Andeschile ONG desde 2017.</li>
+                <li><span class="font-bold text-orange-600">Colaboración:</span> INSUCO (Instituto Superior de Comercio) de Valparaíso.</li>
+                <li><span class="font-bold text-orange-600">Propósito:</span> Ofrecer un espacio seguro con asistencia, descanso y punto de encuentro a los ciclistas que llegan a nuestra región.</li>
+                <li><span class="font-bold text-orange-600">Historial:</span> 5 versiones exitosas, crucial para la seguridad y bienestar de los ciclistas.</li>
+            </ul>
+            <p class="mt-4 leading-relaxed">Más detalles en: <a href="https://andeschileong.cl/tags/refugio-ciclista/" target="_blank" class="text-blue-500 hover:underline font-semibold">andeschileong.cl/tags/refugio-ciclista/</a></p>
+        </div>
+
+        <!-- Slide 4: La Necesidad de una Plataforma Digital -->
+        <div class="slide">
+            <h2>¿Por qué necesitamos una Plataforma Digital?</h2>
+            <ul class="list-disc pl-8 leading-relaxed">
+                <li><span class="font-bold text-green-600">Crecimiento Constante:</span> El Refugio Ciclista sigue expandiéndose en alcance y número de participantes. ¡Ya hemos recibido a más de 1500 cicloviajeros!</li>
+                <li><span class="font-bold text-green-600">Objetivo:</span> Optimizar la operación, mejorar drásticamente la experiencia del ciclista y ofrecer herramientas eficientes a nuestro valioso equipo.</li>
+                <li><span class="font-bold text-green-600">Un Paso Crucial:</span> El desarrollo de una plataforma robusta es esencial para escalar el proyecto de forma eficiente.</li>
+                <li><span class="font-bold text-green-600">Beneficio:</span> Asegurar una gestión más fluida, transparente y segura para todos.</li>
+            </ul>
+        </div>
+
+        <!-- Slide 5: Alcance y Funcionalidades Clave (I) -->
+        <div class="slide">
+            <h2>Funcionalidades Clave de la Plataforma (1/3)</h2>
+            <h3>1. Formulario de Registro para Ciclistas</h3>
+            <ul class="list-disc pl-8 leading-relaxed">
+                <li>Un sistema intuitivo y amigable para el <span class="font-bold text-blue-600">registro previo</span> de ciclistas.</li>
+                <li><span class="font-bold">¿Qué permite?</span> Estimar la cantidad de participantes, optimizar la logística de recursos y agilizar el proceso de ingreso el día del evento.</li>
+                <li><span class="font-bold">Beneficio Directo:</span> Una mejor experiencia para el ciclista desde antes de llegar.</li>
+            </ul>
+        </div>
+
+        <!-- Slide 6: Alcance y Funcionalidades Clave (II) -->
+        <div class="slide">
+            <h2>Funcionalidades Clave de la Plataforma (2/3)</h2>
+            <h3>2. Sección de Intranet para el Equipo (Módulo de Gestión)</h3>
+            <ul class="list-disc pl-8 leading-relaxed">
+                <li>Una interfaz segura y sencilla diseñada para el equipo de <span class="font-bold text-orange-600">voluntarios</span> del Refugio.</li>
+                <li><span class="font-bold">Control en Tiempo Real:</span> Funcionalidad para registrar la entrada ("check-in") y salida ("check-out") de ciclistas.</li>
+                <li><span class="font-bold">Precisión:</span> Permite un control exacto del aforo y de las personas dentro del refugio en todo momento.</li>
+            </ul>
+        </div>
+
+        <!-- Slide 7: Alcance y Funcionalidades Clave (III) -->
+        <div class="slide">
+            <h2>Funcionalidades Clave de la Plataforma (3/3)</h2>
+            <h3>3. Contador en Tiempo Real en Landing Page</h3>
+            <ul class="list-disc pl-8 leading-relaxed">
+                <li>Un <span class="font-bold text-green-600">contador visible</span> y siempre actualizado en la página principal del Refugio Ciclista.</li>
+                <li><span class="font-bold">Información Instantánea:</span> Muestra la cantidad exacta de personas que se encuentran dentro de las instalaciones.</li>
+                <li><span class="font-bold">Transparencia y Seguridad:</span> Vital para la gestión de aforo, la seguridad de los usuarios y la comunicación abierta.</li>
+            </ul>
+        </div>
+
+        <!-- Slide 8: Tecnologías Propuestas (Abierto a Exploración) -->
+        <div class="slide">
+            <h2>Tecnologías Propuestas: ¡A innovar!</h2>
+            <h3 class="mt-4"><span class="font-bold">Nuestra Idea Inicial:</span></h3>
+            <ul class="list-disc pl-8 leading-relaxed">
+                <li>Framework Web: <span class="font-bold text-blue-600">Flask</span> (Python)</li>
+                <li>Base de Datos: <span class="font-bold text-blue-600">PostgreSQL</span></li>
+            </ul>
+            <h3 class="mt-4"><span class="font-bold">¡Pero estamos abiertos a más!</span></h3>
+            <ul class="list-disc pl-8 leading-relaxed">
+                <li>Total flexibilidad para explorar otras tecnologías y stacks.</li>
+                <li>Una oportunidad increíble para la creatividad y el aprendizaje de vanguardia.</li>
+                <li>La prioridad es cumplir con los requisitos funcionales y maximizar el desarrollo de los estudiantes.</li>
+            </ul>
+        </div>
+
+        <!-- Slide 9: ¿Por Qué este Proyecto para los Estudiantes? -->
+        <div class="slide">
+            <h2>¿Por qué este Proyecto para sus estudiantes?</h2>
+            <ul class="list-disc pl-8 leading-relaxed">
+                <li><span class="font-bold text-orange-600">Experiencia Real:</span> Desarrollo de software de principio a fin en un caso de uso concreto.</li>
+                <li><span class="font-bold text-orange-600">Impacto Social Directo:</span> Contribuir a una causa benéfica y ver el trabajo en acción.</li>
+                <li><span class="font-bold text-orange-600">Habilidades Clave:</span>
+                    <ul class="list-disc pl-8 mt-2">
+                        <li>Desarrollo web (frontend y backend)</li>
+                        <li>Gestión de bases de datos</li>
+                        <li>Diseño UX/UI</li>
+                        <li>Trabajo en equipo y gestión de proyectos</li>
+                    </ul>
+                </li>
+                <li><span class="font-bold text-orange-600">Portafolio Profesional:</span> Un proyecto robusto y relevante para destacar.</li>
+                <li><span class="font-bold text-orange-600">Innovación y Desafío:</span> Fomentar el pensamiento crítico y la propuesta de soluciones.</li>
+            </ul>
+        </div>
+
+        <!-- Slide 10: Conclusión y Llamado a la Acción -->
+        <div class="slide">
+            <h2>¡Únete a la Aventura!</h2>
+            <ul class="list-disc pl-8 leading-relaxed">
+                <li>Estamos convencidos de que el talento y la energía de los estudiantes de Informática de DUOC UC Viña del Mar son la clave para este proyecto.</li>
+                <li>Les invitamos a ser parte de esta iniciativa que une la pasión por la tecnología con un profundo sentido de servicio a la comunidad.</li>
+                <li>Agradecemos enormemente su interés y consideración.</li>
+                <li>¡Esperamos que esta oportunidad les motive a construir algo verdaderamente significativo!</li>
+            </ul>
+            <h3 class="mt-8 text-blue-700 font-bold">¡Esperamos colaborar muy pronto con DUOC UC en esta emocionante aventura!</h3>
+        </div>
+
+        <!-- Slide counter display -->
+        <div id="slide-counter"></div>
+    </div>
+
+    <div class="nav-buttons">
+        <button id="prevButton" class="nav-button" disabled>Anterior</button>
+        <button id="nextButton" class="nav-button">Siguiente</button>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+        const slideCounter = document.getElementById('slide-counter');
+        let currentSlide = 0;
+
+        // Function to show a specific slide
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                slide.style.display = 'none'; /* Ensure it's hidden when not active */
+                slide.style.opacity = '0';
+                slide.style.transform = 'translateX(50px)'; /* Reset transform for next animation */
+            });
+            slides[index].classList.add('active');
+            slides[index].style.display = 'flex'; /* Make active slide visible */
+            // A slight delay before changing opacity and transform to ensure 'display: flex' is applied
+            setTimeout(() => {
+                slides[index].style.opacity = '1';
+                slides[index].style.transform = 'translateX(0)';
+            }, 50); /* Small delay */
+            updateNavButtons();
+            updateSlideCounter();
+        }
+
+        // Function to update the state of navigation buttons and next button text
+        function updateNavButtons() {
+            prevButton.disabled = currentSlide === 0;
+
+            if (currentSlide === slides.length - 1) {
+                nextButton.textContent = 'Volver al Inicio';
+                nextButton.onclick = () => {
+                    currentSlide = 0; // Go to first slide
+                    showSlide(currentSlide);
+                };
+            } else {
+                nextButton.textContent = 'Siguiente';
+                nextButton.onclick = () => {
+                    if (currentSlide < slides.length - 1) {
+                        currentSlide++;
+                        showSlide(currentSlide);
+                    }
+                };
+            }
+        }
+
+        // Function to update the slide counter text
+        function updateSlideCounter() {
+            slideCounter.textContent = `${currentSlide + 1}/${slides.length}`;
+        }
+
+        // Event listener for the "Previous" button
+        prevButton.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        });
+
+        // Initialize the presentation on window load
+        window.onload = () => {
+            showSlide(currentSlide);
+        };
+    </script>
+</body>
+</html>
+
