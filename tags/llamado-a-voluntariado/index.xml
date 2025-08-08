@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Llamado a Voluntariado on Andes Chile ONG</title>
-    <link>https://andeschileong.cl/tags/llamado-a-voluntariado/</link>
+    <link>http://localhost:1313/tags/llamado-a-voluntariado/</link>
     <description>Recent content in Llamado a Voluntariado on Andes Chile ONG</description>
     <generator>Hugo</generator>
     <language>es-CL</language>
     <lastBuildDate>Sun, 08 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://andeschileong.cl/tags/llamado-a-voluntariado/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/llamado-a-voluntariado/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Llamado a Voluntariado para el Refugio Ciclista 2024</title>
-      <link>https://andeschileong.cl/noticias/2024/voluntariado-refugio-ciclista/</link>
+      <link>http://localhost:1313/noticias/2024/voluntariado-refugio-ciclista/</link>
       <pubDate>Sun, 08 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://andeschileong.cl/noticias/2024/voluntariado-refugio-ciclista/</guid>
+      <guid>http://localhost:1313/noticias/2024/voluntariado-refugio-ciclista/</guid>
       <description>&lt;p&gt;&lt;em&gt;Por años, en Valparaíso se ha recibido miles de ciclistas en la noche del 8 de Diciembre, fecha en que se cierra la Ruta 68 para la peregrinación con motivo de Lo Vásquez, sin embargo, la ciudad se encontraba lejos de estar capacitada para la recepción de esta ola de turistas en dos ruedas. El panorama habitual ha sido ver personas durmiendo en plazas, playas y otros espacios, sin poder descansar, sin seguridad ni elementos básicos como agua o baños. Pensar esto se hace cada vez más complejo cuando se considera que al descansar se ha dado que los ciclistas pueden despertar sin sus bicicletas o con panoramas desfavorables. Por otro lado, las empresas de buses suelen abusar de los precios para volver a la capital llevando bicicletas en maleteros y surge un conjunto de servicios que viene a remediar esto, lo cual deja en evidencia la falta de interés humano.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Llamado a Voluntariado para el Refugio Ciclista 2023</title>
-      <link>https://andeschileong.cl/noticias/2023/voluntariado-refugio-ciclista/</link>
+      <link>http://localhost:1313/noticias/2023/voluntariado-refugio-ciclista/</link>
       <pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate>
-      <guid>https://andeschileong.cl/noticias/2023/voluntariado-refugio-ciclista/</guid>
+      <guid>http://localhost:1313/noticias/2023/voluntariado-refugio-ciclista/</guid>
       <description>&lt;p&gt;&lt;em&gt;Por años, en Valparaíso se ha recibido miles de ciclistas en la noche del 8 de Diciembre, fecha en que se cierra la Ruta 68 para la peregrinación con motivo de Lo Vásquez, sin embargo, la ciudad se encontraba lejos de estar capacitada para la recepción de esta ola de turistas en dos ruedas. El panorama habitual ha sido ver personas durmiendo en plazas, playas y otros espacios, sin poder descansar, sin seguridad ni elementos básicos como agua o baños. Pensar esto se hace cada vez más complejo cuando se considera que al descansar se ha dado que los ciclistas pueden despertar sin sus bicicletas o con panoramas desfavorables. Por otro lado, las empresas de buses suelen abusar de los precios para volver a la capital llevando bicicletas en maleteros y surge un conjunto de servicios que viene a remediar esto, lo cual deja en evidencia la falta de interés humano.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
   </channel>
