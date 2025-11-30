@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>FNB on Andes Chile ONG</title>
-    <link>http://localhost:1313/tags/fnb/</link>
+    <link>https://andeschileong.cl/tags/fnb/</link>
     <description>Recent content in FNB on Andes Chile ONG</description>
     <generator>Hugo</generator>
     <language>es-CL</language>
     <lastBuildDate>Thu, 25 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/fnb/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://andeschileong.cl/tags/fnb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2da Cuenta Pública sobre Movilidad Sostenible en el Gran Valparaíso</title>
-      <link>http://localhost:1313/actividades/2025/cuenta-publica-movilidad/</link>
+      <link>https://andeschileong.cl/actividades/2025/cuenta-publica-movilidad/</link>
       <pubDate>Thu, 25 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/actividades/2025/cuenta-publica-movilidad/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/actividades/2023/semana-movilidad/cuenta-publica/portada.png&#34; alt=&#34;Cuenta Pública&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;En 2025, &lt;a href=&#34;http://localhost:1313/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Andes Chile ONG&lt;/strong&gt;&lt;/a&gt; invita a la comunidad, autoridades, academia y mundo privado a la realización de la &lt;strong&gt;2da Cuenta Pública sobre Movilidad Sostenible del Gran Valparaíso&lt;/strong&gt;, evento enfocado en la rendición de cuentas, fortalecimiento de la participación ciudadana y orientación de políticas públicas en torno a la sostenibilidad urbana y el transporte a nivel local.&lt;/p&gt;&#xA;&lt;p&gt;La convocatoria servirá para presentar de manera transparente, participativa y técnica los avances, desafíos y compromisos asumidos por las autoridades y actores locales en el desarrollo de una movilidad sostenible, inclusiva y resiliente en el territorio del Gran Valparaíso durante el último año.&lt;/p&gt;</description>
+      <guid>https://andeschileong.cl/actividades/2025/cuenta-publica-movilidad/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://andeschileong.cl/img/actividades/2023/semana-movilidad/cuenta-publica/portada.png&#34; alt=&#34;Cuenta Pública&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;En 2025, &lt;a href=&#34;https://andeschileong.cl/&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;Andes Chile ONG&lt;/strong&gt;&lt;/a&gt; invita a la comunidad, autoridades, academia y mundo privado a la realización de la &lt;strong&gt;2da Cuenta Pública sobre Movilidad Sostenible del Gran Valparaíso&lt;/strong&gt;, evento enfocado en la rendición de cuentas, fortalecimiento de la participación ciudadana y orientación de políticas públicas en torno a la sostenibilidad urbana y el transporte a nivel local.&lt;/p&gt;&#xA;&lt;p&gt;La convocatoria servirá para presentar de manera transparente, participativa y técnica los avances, desafíos y compromisos asumidos por las autoridades y actores locales en el desarrollo de una movilidad sostenible, inclusiva y resiliente en el territorio del Gran Valparaíso durante el último año.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
