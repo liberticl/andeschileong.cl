@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Víctimas Siniestros Viales on Andes Chile ONG</title>
-    <link>https://andeschileong.cl/tags/v%C3%ADctimas-siniestros-viales/</link>
+    <link>http://localhost:1313/tags/v%C3%ADctimas-siniestros-viales/</link>
     <description>Recent content in Víctimas Siniestros Viales on Andes Chile ONG</description>
     <generator>Hugo</generator>
     <language>es-CL</language>
     <lastBuildDate>Fri, 25 Nov 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://andeschileong.cl/tags/v%C3%ADctimas-siniestros-viales/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/v%C3%ADctimas-siniestros-viales/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cicletada por las Víctimas de Siniestros Viales</title>
-      <link>https://andeschileong.cl/actividades/2022/cicletada-victimas-siniestros-viales/</link>
+      <link>http://localhost:1313/actividades/2022/cicletada-victimas-siniestros-viales/</link>
       <pubDate>Fri, 25 Nov 2022 00:00:00 +0000</pubDate>
-      <guid>https://andeschileong.cl/actividades/2022/cicletada-victimas-siniestros-viales/</guid>
+      <guid>http://localhost:1313/actividades/2022/cicletada-victimas-siniestros-viales/</guid>
       <description>&lt;p style=&#34;font-size:15px; margin-bottom:0rem; line-height:22px&#34;&gt; &#xA;    &#xA;        &#xA;            Esta publicación se enmarca en el contexto del fondo &lt;b&gt;Creamos 2022&lt;/b&gt; de INJUV, adjudicado por &lt;i&gt;Francisco Vergara&lt;/i&gt; con el proyecto &lt;b&gt;Cicletadas temáticas para Valparaíso y Viña del Mar&lt;/b&gt;.&#xA;        &#xA;    &#xA;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&#xA;&lt;p&gt;&lt;em&gt;El 2021 fue el peor de los últimos 15 años en cuanto a siniestralidad y mortalidad vial. Al 20 de Noviembre de 2022, hemos superado las cifras del año pasado en un 9%&lt;/em&gt;. En la conmemoración a las víctimas de siniestros viales organizada por algunas organizaciones sociales y CONASET en Santiago, estas fueron las palabras del Ministro de Transportes y Telecomunicaciones, Juan Carlos Muñoz.&lt;/p&gt;</description>
     </item>
   </channel>
