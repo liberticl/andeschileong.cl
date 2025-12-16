@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Andes Chile ONG">
   <link rel="shortcut icon" type="image/x-icon" href="https://andeschileong.cl/img/favicon.ico">
-  <title>Desafío Araucanía Profunda | Andes Chile ONG</title>
+  <title>Desafío Araucanía Profunda 2025 | Andes Chile ONG</title>
   <meta name="description"
     content="¡Travesía en bicicleta por más de 150 km, recorriendo 8 sectores de la comuna de Lonquimay en La Araucanía!">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -87,7 +87,7 @@
 
 
   <div class="container">
-    <h3 class="mt-3"><b>Desafío Araucanía Profunda</b></h3>
+    <h3 class="mt-3"><b>Desafío Araucanía Profunda 2025</b></h3>
     <div class="blog-title my-4">
       <h6>
         
@@ -157,7 +157,7 @@
 <li>Protección solar.</li>
 <li>Toalla para pies (se utilizará en cruce de arroyo).</li>
 </ul>
-
+<!-- 
 
 
 <div>
@@ -167,7 +167,7 @@
         </button>
     </a>
 </div>
-<br>
+<br> -->
 <p>El cronograma de los 3 días es el siguiente:</p>
 <p><strong>21 de Febrero</strong></p>
 <ul>
@@ -188,60 +188,255 @@
 <li>Tramo 4: desde Camping Lolén hasta Lonquimay urbano por ruta CH-181 en asfalto (~15 km).</li>
 <li>Llegada a la meta en Plaza de Armas de Lonquimay. Ceremonia de finalización y entrega de medallas.</li>
 </ul>
-<hr>
-<h4 id="sobre-el-pago"><strong>Sobre el pago</strong></h4>
-<p>Para participar, debes contactarte con <a href="https://wa.me/56991981271" target="_blank"><strong>+56991981271</strong></a> o <a href="https://wa.me/56982127705" target="_blank"><strong>+56982127705</strong></a> y registrarte en <a href="https://forms.gle/zHWJZ9ESH7rRd42v8" target="_blank"><strong>este formulario único</strong></a> y transferir el valor de registro ($85.000.- <del>$80.000.- hasta el 2 de Febrero</del>) a la siguiente cuenta:</p>
-<table>
-  <thead>
-      <tr>
-          <th>Datos</th>
-          <th></th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Nombre</td>
-          <td>Daniela Aguayo Muñoz</td>
-      </tr>
-      <tr>
-          <td>RUT</td>
-          <td>18.564.392-1</td>
-      </tr>
-      <tr>
-          <td>Banco Destino</td>
-          <td>Banco Estado</td>
-      </tr>
-      <tr>
-          <td>Tipo Cuenta</td>
-          <td>Cuenta RUT</td>
-      </tr>
-      <tr>
-          <td>Nro. Cuenta</td>
-          <td>18564392</td>
-      </tr>
-      <tr>
-          <td>Correo</td>
-          <td><a href="mailto:daniela@andeschileong.cl" target="_blank">daniela@andeschileong.cl</a></td>
-      </tr>
-  </tbody>
-</table>
-<p><strong>Importante</strong></p>
-<ul>
-<li>Se debe enviar correo con el comprobante de transferencia para considerarse inscrito/a.</li>
-<li>Para efectos devolución en caso de no participar en el evento:
-<ul>
-<li>Hasta el 13 de Febrero (23:59 horas) se reembolsará el 60% del valor del cupo.¹</li>
-<li>Desde el 14 de Febrero (00:00 horas) se reembolsará el 50% del valor del cupo.²</li>
-</ul>
-</li>
-</ul>
-<p style="font-size:15px; margin-bottom:0rem; line-height:22px"> 
-    1. Si pagaste el precio rebajado, tu reembolso será de $48.000.- y de lo contrario, será de $51.000.-<br>
-    2. Si pagaste el precio rebajado, tu reembolso será de $40.000.- y de lo contrario, será de $42.500.-
-</p>
-<br><br>
-<iframe src='/docs/2025/detalle-del-desafio.pdf' width="100%" height="1000px"></iframe>
-<p><img src="/img/actividades/2025/araucania-profunda/araucaniaprofunda.png" alt=""></p>
+<style>
+    .row>.column {
+        padding: 0 8px;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+     
+    .column {
+        float: center;
+        width: max(25%,calc(100%/7));
+        margin: 1% auto;
+    }
+
+     
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.800);
+    }
+
+     
+    .modal-content {
+        position: relative;
+        background-color: #fefefe00;
+        margin: auto;
+        width: 100%;
+        max-width: 700px;
+    }
+
+     
+    .close {
+        color: white;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #999;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+     
+    .mySlides {
+        display: none;
+    }
+
+    .cursor {
+        cursor: pointer;
+    }
+     
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -50px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.3s;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+     
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+     
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+     
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+     
+    .caption-container {
+        text-align: center;
+        background-color: black;
+        padding: 2px 16px;
+        color: white;
+    }
+
+    img.hover-shadow {
+        transition: 0.3s;
+        border-radius: 1rem;
+    }
+
+    .hover-shadow:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+</style>
+
+<section>
+<div class="row">
+    <div class="column">
+            <img src="/img/actividades/2025/araucania-profunda/evento/1-100.jpg" width="95%" onclick="openModal();currentSlide( 0 )" class="hover-shadow cursor">
+        </div>
+    <div class="column">
+            <img src="/img/actividades/2025/araucania-profunda/evento/1-39.jpg" width="95%" onclick="openModal();currentSlide( 1 )" class="hover-shadow cursor">
+        </div>
+    <div class="column">
+            <img src="/img/actividades/2025/araucania-profunda/evento/1-52.jpg" width="95%" onclick="openModal();currentSlide( 2 )" class="hover-shadow cursor">
+        </div>
+    <div class="column">
+            <img src="/img/actividades/2025/araucania-profunda/evento/1-70.jpg" width="95%" onclick="openModal();currentSlide( 3 )" class="hover-shadow cursor">
+        </div>
+    <div class="column">
+            <img src="/img/actividades/2025/araucania-profunda/evento/1-88.jpg" width="95%" onclick="openModal();currentSlide( 4 )" class="hover-shadow cursor">
+        </div>
+    <div class="column">
+            <img src="/img/actividades/2025/araucania-profunda/evento/1-96.jpg" width="95%" onclick="openModal();currentSlide( 5 )" class="hover-shadow cursor">
+        </div>
+    <div class="column">
+            <img src="/img/actividades/2025/araucania-profunda/evento/1-97.jpg" width="95%" onclick="openModal();currentSlide( 6 )" class="hover-shadow cursor">
+        </div>
+    
+</div>
+
+<div id="myModal" class="modal" onkeydown="event()">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+        <div class="mySlides">
+                <img src="/img/actividades/2025/araucania-profunda/evento/1-100.jpg" style="width:100%; border-radius: 1.5rem;">
+            </div>
+        <div class="mySlides">
+                <img src="/img/actividades/2025/araucania-profunda/evento/1-39.jpg" style="width:100%; border-radius: 1.5rem;">
+            </div>
+        <div class="mySlides">
+                <img src="/img/actividades/2025/araucania-profunda/evento/1-52.jpg" style="width:100%; border-radius: 1.5rem;">
+            </div>
+        <div class="mySlides">
+                <img src="/img/actividades/2025/araucania-profunda/evento/1-70.jpg" style="width:100%; border-radius: 1.5rem;">
+            </div>
+        <div class="mySlides">
+                <img src="/img/actividades/2025/araucania-profunda/evento/1-88.jpg" style="width:100%; border-radius: 1.5rem;">
+            </div>
+        <div class="mySlides">
+                <img src="/img/actividades/2025/araucania-profunda/evento/1-96.jpg" style="width:100%; border-radius: 1.5rem;">
+            </div>
+        <div class="mySlides">
+                <img src="/img/actividades/2025/araucania-profunda/evento/1-97.jpg" style="width:100%; border-radius: 1.5rem;">
+            </div>
+        
+
+        
+        <a class="prev" onclick=plusSlides(-1)>&#10094;</a>
+        <a class="next" onclick=plusSlides(1)>&#10095;</a>
+    </div>
+</div>
+</section>
+
+<script>
+    
+    function openModal() {
+        document.getElementById("myModal").style.display = "block";
+    }
+
+    
+    var span = document.getElementsByClassName("close")[0]
+    var modal = document.getElementById("myModal")
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function() {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    
+    document.addEventListener('keydown', function(event) {
+        if (modal.style.display === 'block') {
+            if (event.key === 'ArrowRight') {
+                plusSlides(1);
+            } else if (event.key === 'ArrowLeft') {
+                plusSlides(-1);
+            } else if (event.key === 'Escape') {
+                modal.style.display = "none";
+            }
+        }
+    });
+
+    var next = document.getElementsByClassName("next")
+    var prev = document.getElementsByClassName("prev")
+
+
+    
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var captionText = document.getElementById("caption");
+        if (n === slides.length) {
+            slideIndex = 0
+        } 
+        if (n < 0) {
+            slideIndex = slides.length - 1
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex].style.display = "block";
+    }
+</script>
 
           <br>
           <br>
